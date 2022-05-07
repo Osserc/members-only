@@ -4,10 +4,10 @@
   <div class="navbar">
   <% if user_signed_in? %>
       <div class="navigation">
-        <div class="button"><%= button_to "New story", new_story_path %></div>
+        <div class="button"><%= link_to "New story", new_story_path %></div>
       </div>
       <div class="logged-in">
-        <div><%= button_to current_user.email, edit_user_registration_path %></div>
+        <div><%= link_to "Edit profile", edit_user_registration_path %></div>
         <div class="button"><%= button_to "Sign out", destroy_user_session_path, method: :delete,  data: { turbo: "false" } %></div>
       </div>
     <% else %>
@@ -21,10 +21,12 @@
   </div>
   <div id="stories">
     <% @stories.each do |story| %>
-      <%= render story %>
-      <p>
-        <%= link_to "Show this story", story %>
-      </p>
+      <div>
+        <%= render story %>
+        <p>
+          <%= link_to "Show this story", story %>
+        </p>
+      </div>
     <% end %>
   </div>
 </div>

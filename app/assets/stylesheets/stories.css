@@ -30,6 +30,8 @@ body {
 .middle {
     display: grid;
     grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr;
+    height: 100%;
     padding: 15px;
 }
 
@@ -39,7 +41,7 @@ body {
     justify-content: space-between;
 }
 
-.navbar .logged-out, .navbar .logged-in {
+.navbar .logged-out, .navbar .logged-in, .navbar .navigation {
     display: flex;
     flex-direction: column;
     padding: 15px;
@@ -54,6 +56,10 @@ body {
     text-align: center;
 }
 
+.navbar .navigation {
+    margin-bottom: auto;
+}
+
 .navbar div {
     text-align: center;
 }
@@ -66,4 +72,10 @@ button {
     height: 35px;
     font-size: 18px;
     font-weight: bold;
+}
+
+#stories {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }

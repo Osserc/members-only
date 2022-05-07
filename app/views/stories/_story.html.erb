@@ -4,6 +4,13 @@
     <%= story.title %>
   </p>
 
+  <% if user_signed_in? %>
+    <p>
+      <strong>Author:</strong>
+      <%= story.user.username %>
+    </p>
+  <% end %>
+
   <p>
     <strong>Body:</strong>
     <%= story.body %>
