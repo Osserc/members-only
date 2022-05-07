@@ -1,9 +1,9 @@
 body {
     margin: 0;
-    background: url("background_curtains.jpg");
-    background-size: 100% 100%;
     width: 100vw;
     height: 100vh;
+    background: url("background_curtains.jpg");
+    background-size: 100% 100%;
     display: flex;
     flex-direction: column;
 }
