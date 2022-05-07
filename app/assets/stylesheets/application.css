@@ -13,3 +13,45 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url("background_curtains.jpg");
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    margin-top: auto;
+    text-align: center;
+    color: darkred;
+    background-color: black;
+    padding: 10px;
+    border-top: 4px solid darkred;
+}
+
+.notice, .alert {
+    text-align: center;
+    color: darkred;
+    background-color: black;
+    padding: 5px;
+    font-size: 24px;
+}
+
+button {
+    border-radius: 25px;
+    background-color: darkred;
+    color: black;
+    width: 150px;
+    height: 35px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+button a:link, button a:visited, button a:active, button a:hover {
+    text-decoration: none;
+    color: black;
+}

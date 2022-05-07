@@ -1,32 +1,34 @@
-<div class="banner">The Red Curtain</div>
-
-<div class="middle">
-  <div class="navbar">
-  <% if user_signed_in? %>
-      <div class="navigation">
-        <div class="button"><%= link_to "New story", new_story_path %></div>
+<div class="stories-index">
+  <div class="banner">The Red Curtain</div>
+  
+  <div class="middle">
+    <div class="navbar">
+    <% if user_signed_in? %>
+        <div class="navigation">
+          <button><%= link_to "New story", new_story_path %></button>
+        </div>
+        <div class="logged-in">
+          <button><%= link_to "Edit profile", edit_user_registration_path %></button>
+          <%= button_to "Sign out", destroy_user_session_path, method: :delete, data: { turbo: "false" } %>
+        </div>
+      <% else %>
+        <div class="logged-out">
+          <div>Do you want to see who's behind the curtain?</div>
+          <button><%= link_to "Sign up", new_user_registration_path, data: { turbo: "false" } %></button>
+          <div>Are you already an actor?</div>
+          <button><%= link_to "Sign in", new_user_session_path, data: { turbo: "false" } %></button>
+        </div>
+      <% end %>
+    </div>
+    <ScrollViewer>
+      <div id="stories">
+        <% @stories.each do |story| %>
+          <div class="story">
+            <%= render story %>
+              <button><%= link_to "Show this story", story %></button>
+          </div>
+        <% end %>
       </div>
-      <div class="logged-in">
-        <div><%= link_to "Edit profile", edit_user_registration_path %></div>
-        <div class="button"><%= button_to "Sign out", destroy_user_session_path, method: :delete,  data: { turbo: "false" } %></div>
-      </div>
-    <% else %>
-      <div class="logged-out">
-        <div>Do you want to see who's behind the curtain?</div>
-        <div class="button"><%= link_to "Sign up", new_user_registration_path,  data: { turbo: "false" } %></div>
-        <div>Are you already an actor?</div>
-        <div class="button"><%= link_to "Sign in", new_user_session_path,  data: { turbo: "false" } %></div>
-      </div>
-    <% end %>
-  </div>
-  <div id="stories">
-    <% @stories.each do |story| %>
-      <div>
-        <%= render story %>
-        <p>
-          <%= link_to "Show this story", story %>
-        </p>
-      </div>
-    <% end %>
+    </ScrollViewer>
   </div>
 </div>

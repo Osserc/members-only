@@ -1,19 +1,9 @@
-<div id="<%= dom_id story %>">
-  <p>
-    <strong>Title:</strong>
-    <%= story.title %>
-  </p>
-
-  <% if user_signed_in? %>
-    <p>
-      <strong>Author:</strong>
-      <%= story.user.username %>
-    </p>
-  <% end %>
-
-  <p>
-    <strong>Body:</strong>
-    <%= story.body %>
-  </p>
-
+<div class="stories-partial">
+      <div class="title">
+            <strong><%= story.title %></strong>, by <% if user_signed_in? %><strong><%= story.user.username %></strong><% else %><strong>Anonymous</strong><% end %>
+      </div>
+    
+      <div class="body">
+            <%= story.body %>
+      </div>
 </div>

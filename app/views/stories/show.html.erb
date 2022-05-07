@@ -1,8 +1,10 @@
-<%= render @story %>
-
-<div>
-  <%= link_to "Edit this story", edit_story_path(@story) %> |
-  <%= link_to "Back to stories", stories_path %>
-
-  <%= button_to "Destroy this story", @story, method: :delete %>
+<div class="stories-show">
+  <%= render @story %>
+  
+  <div class="actions">
+    <div><button><%= link_to "Edit", edit_story_path(@story) %></button></div>
+    <div><%= button_to "Delete", @story, method: :delete %></div>
+  
+    <div class="back"><button><%= link_to "Back", stories_path %></button></div>
+  </div>
 </div>
