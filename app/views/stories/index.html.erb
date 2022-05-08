@@ -20,15 +20,13 @@
         </div>
       <% end %>
     </div>
-    <ScrollViewer>
-      <div id="stories">
-        <% @stories.each do |story| %>
-          <div class="story">
-            <%= render story %>
-              <button><%= link_to "Show this story", story %></button>
-          </div>
-        <% end %>
-      </div>
-    </ScrollViewer>
+    <div id="stories">
+      <% @stories.each do |story| %>
+        <div class="story">
+          <%= render story %>
+            <button><%= link_to "Show this story", story %></button>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>

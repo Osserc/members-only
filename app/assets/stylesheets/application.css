@@ -41,7 +41,7 @@
     font-size: 24px;
 }
 
-button {
+button, .form-button {
     border-radius: 25px;
     background-color: darkred;
     color: black;
