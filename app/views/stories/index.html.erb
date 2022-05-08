@@ -20,13 +20,17 @@
         </div>
       <% end %>
     </div>
-    <div id="stories">
-      <% @stories.each do |story| %>
-        <div class="story">
-          <%= render story %>
-            <button><%= link_to "Show this story", story %></button>
+    <div class="border">
+      <div class="inner-border">
+        <div class="stories">
+          <% @stories.each do |story| %>
+            <div class="story">
+              <%= render story %>
+                <button><%= link_to "Show this story", story %></button>
+            </div>
+          <% end %>
         </div>
-      <% end %>
+      </div>
     </div>
   </div>
 </div>

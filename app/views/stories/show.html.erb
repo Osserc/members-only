@@ -2,8 +2,10 @@
   <%= render @story %>
   
   <div class="actions">
+    <% if user_signed_in? %>
     <div><button><%= link_to "Edit", edit_story_path(@story) %></button></div>
     <div><%= button_to "Delete", @story, method: :delete %></div>
+    <% end %>
   
     <div class="back"><button><%= link_to "Back", stories_path %></button></div>
   </div>
