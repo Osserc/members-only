@@ -1,0 +1,34 @@
+.users-sign-in {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+    color: darkred;
+    background-color: black;
+    border-radius: 25px;
+    gap: 15px;
+    font-size: 20px;
+    border: 4px solid darkred;
+    text-align: center;
+    width: 20%;
+    margin: auto;
+}
+
+.users-sign-in form  {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.users-sign-in .field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+
+.users-sign-in label {
+    font-weight: bold;
+}

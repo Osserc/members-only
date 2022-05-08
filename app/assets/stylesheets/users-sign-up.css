@@ -1,0 +1,34 @@
+.users-sign-up {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+    color: darkred;
+    background-color: black;
+    border-radius: 25px;
+    gap: 15px;
+    font-size: 20px;
+    border: 4px solid darkred;
+    text-align: center;
+    width: 20%;
+    margin: auto;
+}
+
+.users-sign-up form  {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.users-sign-up .field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+
+.users-sign-up label {
+    font-weight: bold;
+}
