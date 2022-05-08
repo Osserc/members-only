@@ -2,7 +2,7 @@
   <%= render @story %>
   
   <div class="actions">
-    <% if user_signed_in? %>
+    <% if current_user == @story.user %>
     <div><button><%= link_to "Edit", edit_story_path(@story) %></button></div>
     <div><%= button_to "Delete", @story, method: :delete %></div>
     <% end %>
