@@ -1,27 +1,29 @@
-<%= form_with(model: story) do |form| %>
-  <% if story.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(story.errors.count, "error") %> prohibited this story from being saved:</h2>
-
-      <ul>
-        <% story.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+<div class="stories-form">
+  <%= form_with(model: story) do |form| %>
+    <% if story.errors.any? %>
+      <div style="color: red">
+        <h2><%= pluralize(story.errors.count, "error") %> prohibited this story from being saved:</h2>
+  
+        <ul>
+          <% story.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  
+    <div class="field">
+      <div><%= form.label :title %></div>
+      <div><%= form.text_field :title, autofocus: true %></div>
+    </div>
+  
+    <div class="field">
+      <div><%= form.label :body %></div>
+      <div><%= form.text_area(:body, size: '50x10') %></div>
+    </div>
+  
+    <div>
+      <%= form.submit :class => "form-button" %>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :title %><br />
-    <%= form.text_field :title, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= form.label :body %><br />
-    <%= form.text_area(:body, size: '50x10') %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>

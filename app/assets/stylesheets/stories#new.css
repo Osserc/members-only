@@ -1,0 +1,12 @@
+.stories-new {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+    color: darkred;
+    gap: 15px;
+    font-size: 20px;
+    text-align: center;
+    margin: auto auto;
+}
