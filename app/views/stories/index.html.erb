@@ -27,7 +27,7 @@
             <% if story.user != nil %>
               <div class="story">
                 <div class="title"><%= story.title %></div>
-                <div class="body"><%= story.body.slice(0, 100) %><% if story.body.length > 30 %>(...)<% end %></div>
+                <div class="body"><%= story.body.slice(0, 100) %><% if story.body.length > 100 %>(...)<% end %></div>
                 <div class="author"><%= "by " %><% if user_signed_in? %><%= story.user.username %><% else %>Anonymous<% end %></div>
                 <div><button><%= link_to "Read more", story %></button></div>
               </div>
