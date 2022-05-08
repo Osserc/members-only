@@ -22,7 +22,7 @@
     justify-content: space-between;
 }
 
-.stories-index .navbar .logged-out, .stories-index .navbar .logged-in, .stories-index .navbar .navigation, .stories-index .story {
+.stories-index .navbar .logged-out, .stories-index .navbar .logged-in, .stories-index .navbar .navigation {
     display: flex;
     flex-direction: column;
     padding: 15px;
@@ -35,6 +35,21 @@
     font-size: 20px;
     border: 4px solid darkred;
     text-align: center;
+}
+
+.stories-index .story {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: darkred;
+    background-color: black;
+    border-radius: 25px;
+    font-size: 20px;
+    border: 4px solid darkred;
+    text-align: center;
+    gap: 15px;
+    padding: 0 15px;
 }
 
 .stories-index .navbar div {

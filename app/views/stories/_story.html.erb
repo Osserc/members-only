@@ -1,9 +1,14 @@
 <div class="stories-partial">
       <div class="title">
-            <strong><%= story.title %></strong>, by <% if user_signed_in? %><strong><%= story.user.username %></strong><% else %><strong>Anonymous</strong><% end %>
+            <strong><%= story.title %></strong>
       </div>
     
       <div class="body">
             <%= story.body %>
       </div>
+
+      <div class="author">
+            by <% if user_signed_in? %><strong><%= story.user.username %></strong><% else %><strong>Anonymous</strong><% end %>
+      </div>
+
 </div>
